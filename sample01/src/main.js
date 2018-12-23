@@ -11,12 +11,14 @@ function initial() {
             isB: false,
             selF: '',
             selB: '',
+            flg: false,
         },
         created: function () {
             this.msgArray.push('sample message.');
             this.message = this.msgArray;
             this.selF = 'red';
             this.selB = 'blue';
+            this.flg = true;
     },
         methods: {
             doAction: function () {
@@ -38,5 +40,5 @@ function initial() {
                 }
             }
         }
-    })
+    });
 }
