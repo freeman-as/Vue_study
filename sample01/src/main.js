@@ -8,12 +8,16 @@ function initial() {
             number: '0',
             woTax: '0',
             isA: true,
-            isB: false
+            isB: false,
+            selF: '',
+            selB: '',
         },
         created: function () {
             this.msgArray.push('sample message.');
             this.message = this.msgArray;
-        },
+            this.selF = 'red';
+            this.selB = 'blue';
+    },
         methods: {
             doAction: function () {
                 this.msgArray.push(this.text1);
