@@ -5,7 +5,8 @@ function initial() {
             msgArray: [],
             message: '',
             text1: '',
-            number: 0
+            number: '0',
+            woTax: '0'
         },
         created: function () {
             this.msgArray.push('sample message.');
@@ -18,14 +19,13 @@ function initial() {
             }
         },
         computed: {
-            result: function () {
-                var total = 0;
-                var n = parseInt(this.number);
-                total = ((1 + n) * n) / 2;
-                // for (var i = 0; i <= this.number * 1; i++) {
-                //     total += i;
-                // }
-                return total;
+            wTax: {
+                get: function () {
+                    return parseInt(this.woTax * 1.08);
+                },
+                set: function (val) {
+                    this.woTax = Math.ceil(val / 1.08);
+                }
             }
         }
     })
