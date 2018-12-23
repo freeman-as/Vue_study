@@ -2,13 +2,18 @@ function initial() {
     new Vue({
         el: '#msg',
         data: {
-            message: 'this is Vue.js sample!',
+            msgArray: [],
+            message: '',
             text1: ''
+        },
+        created: function () {
+            this.msgArray.push('sample message.');
+            this.message = this.msgArray;
         },
         methods: {
             doAction: function () {
-                var str = this.text1;
-                this.message = 'you typed: <span style="color:white; background-color:red;">' + str + '</span>.';
+                this.msgArray.push(this.text1);
+                this.message = this.msgArray;
             }
         }
     })

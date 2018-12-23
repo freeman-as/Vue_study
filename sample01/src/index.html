@@ -9,7 +9,8 @@
 <body onload="initial();">
     <h1>Vue.js</h1>
     <div id="msg">
-        <p v-html="message"></p>
+        <p>{{ message.toString() }}</p>
+        <!-- <p v-html="message"></p> -->
         <input type="text" v-model="text1">
         <input type="button" v-on:click="doAction" value="click">
     </div>
