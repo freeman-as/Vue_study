@@ -10,3 +10,11 @@ h1 {
 p {
     font-size: 18pt;
 }
+.a {
+    color: red;
+    background-color: white;
+}
+.b {
+    color: white;
+    background-color: blue;
+}

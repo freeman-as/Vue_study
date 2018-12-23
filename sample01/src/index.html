@@ -8,15 +8,6 @@
 </head>
 <body onload="initial();">
     <h1>Vue.js</h1>
-    <div id="msg">
-        <!-- <p>{{ result }}</p>
-        <input type="text" v-model="number"> -->
-        <!-- <p>{{ message | json }}</p> -->
-        <!-- <p v-html="message"></p> -->
-        <!-- <input type="text" v-model="text1">
-        <input type="button" v-on:click="doAction" value="click"> -->
-        <p>税抜価格：<input type="text" v-model="woTax"></p>
-        <p>税込価格：<input type="text" v-model="wTax"></p>
-    </div>
+    <p id="msg" v-bind:class="{'a':isA, 'b':isB}" v-on:click="change();">クラスを操作します。</p>
 </body>
 </html>

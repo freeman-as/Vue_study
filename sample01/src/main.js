@@ -6,7 +6,9 @@ function initial() {
             message: '',
             text1: '',
             number: '0',
-            woTax: '0'
+            woTax: '0',
+            isA: true,
+            isB: false
         },
         created: function () {
             this.msgArray.push('sample message.');
@@ -16,6 +18,10 @@ function initial() {
             doAction: function () {
                 this.msgArray.push(this.text1);
                 this.message = this.msgArray;
+            },
+            change: function () {
+                this.isA = !this.isA;
+                this.isB = !this.isB;
             }
         },
         computed: {
