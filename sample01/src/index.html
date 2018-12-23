@@ -6,22 +6,21 @@
     <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
+
+<template id="my-template">
+    <table>
+        <tr v-for="obj in items.split(',')">
+            <td style="border:1px solid #ccc; padding:0px 10px;">
+                {{obj}}
+            </td>
+        </tr>
+    </table>
+</template>
+
 <body onload="initial();">
     <h1>Vue.js</h1>
     <div id="msg">
-        <ol>
-            <li v-for="obj in data">
-                {{ obj }}
-            </li>
-        </ol>
-        <hr>
-        <select size="5" multiple v-model="data">
-            <option>Windows</option>
-            <option>macOS</option>
-            <option>Linux</option>
-            <option>Android</option>
-            <option>iOS</option>
-        </select>
+        <my-component items="one,two,three"></my-component>
     </div>
 </body>
 </html>
