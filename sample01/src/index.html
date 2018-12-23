@@ -8,14 +8,20 @@
 </head>
 <body onload="initial();">
     <h1>Vue.js</h1>
-    <!-- <p id="msg" v-bind:class="{'a':isA, 'b':isB}" v-on:click="change();">クラスを操作します</p> -->
     <div id="msg">
-        <p v-if="flg">メッセージの表示を操作します。</p>
-        <p v-else>[ ※非表示です ]</p>
-        <div>
-            <input type="checkbox" id="ck" v-model="flg">
-            <label for="ck">表示</label>
-        </div>
+        <ol>
+            <li v-for="obj in data">
+                {{ obj }}
+            </li>
+        </ol>
+        <hr>
+        <select size="5" multiple v-model="data">
+            <option>Windows</option>
+            <option>macOS</option>
+            <option>Linux</option>
+            <option>Android</option>
+            <option>iOS</option>
+        </select>
     </div>
 </body>
 </html>
